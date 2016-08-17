@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.css" rel="stylesheet">
+    <link href="theme.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>lil
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+<body>
+    <div class="container">
+        <div class="item">
+            <a href="#"><img src="images/funding.jpg" height="400" width="1200" alt="Funding Davis Schools" /></a>
+        </div>
+
+
+        <!-- Nav tabs -->
+        <ul id="navtabs" class="nav nav-tabs" role="tablist" style="margin: 1em 0">
+            <li role="presentation" class="active"><a href="#funding" aria-controls="funding" role="tab" data-toggle="tab">Funding</a></li>
+            <li role="presentation"><a href="#revenue" aria-controls="revenue" role="tab" data-toggle="tab">Revenue Sources</a></li>
+            <li role="presentation"><a href="#byyear" aria-controls="byyear" role="tab" data-toggle="tab">Revenue by Year</a></li>
+            <li role="presentation"><a href="#expenditures" aria-controls="expenditures" role="tab" data-toggle="tab">Expenditures</a></li>
+            <li role="presentation"><a href="#finance" aria-controls="finance" role="tab" data-toggle="tab">CA School Finance</a></li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade in active" id="funding">
+
+                <h2 style="text-align:center">What is the district’s financial situation?</h2>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="images/situation.png" height="446" width="584" alt="Comparison of revenue and expenditures." />
+                    </div>
+                    <div class="col-md-6">
+                        <p>The district receives money for students from the state and federal governments and from local sources.  Passage of Proposition 30 in November 2012 significantly improved the financial health of Davis schools and public schools throughout California.  California is nearing the the national average in per pupil spending.</p>
+                    </div>
+                </div>
+
+                <div class="row" style="margin-top: 2em">
+                    <div class="col-md-6">
+
+                        <p><strong><a href="http://edsource.org/today/states-in-motion#.UuWeARDTldg" target="_blank">How does California’s investment in public education compare with that of other states?</a> (EdSource)</strong></p>
+
+                        <p><strong><a href="#paying" onclick="return clicktab('#howpay')">How do we pay for California schools?</a></strong></p>
+
+                        <p>
+                            <strong><a href="#revenue" title="Revenue Sources" onclick="return clicktab('#revenue')">How much money does the district receive?</a></strong>
+                        </p>
+
+                        <p>
+                            <strong>
+                                <a href="#yearbyyear" onclick="return clicktab('#byyear')">
+                                    How much have parcel taxes, fundraising and federal stimulus funds helped?
+                                </a></strong>
+                        </p>
+
+                        <p>
+                            <strong>
+                                <a href="#expchart" title="Pie Chart of District Expenditures" onclick="return clicktab('#expenditures')">How much money does the district spend?</a>
+                            </strong>
+                        </p>
+
+                        <p>
+                            If the district regularly spends more money on ongoing expenses than it receives, the budget has a structural deficit.  If deficit spending continues, the district may not be able to pay all its bills in the future.
+                        </p>
+
+                        <p>In recent the years, the district has had a structural deficit, using reserves and one-time funding to avoid program cuts. With new funding from the state, this trend has been reversed.</p>
+
+                        <p>
+                            If the Board does not act to keep the district financially secure, the state can assume control of the district and make necessary reductions.
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <p>
+                            <strong>
+                                <a href="http://www.djusd.net/policies" target="_blank">
+                                    Would you like to see the Board’s policies, including BP 3100: Budget?
+                                </a>
+                            </strong>
+                        </p>
+
+                        <p>
+                            <strong>
+                                <a href="http://wwwstatic.kern.org/gems/fcmat/FiscalOversightGuideFINALsm.pdf" target="_blank">
+                                    What are the state’s and the county's roles in the district’s budget process?
+                                </a>
+                            </strong>
+                            (PDF, 13.8MB)
+                        </p>
+
+                        <p>
+                            <strong>
+                                <a href="https://davis.agendaonline.net/public/davis" target="_blank">
+                                    Would you like to see the Board’s meeting agendas? To find budget updates, type “budget” in the search bar.
+                                </a>
+                            </strong>
+                        </p>
+
+                        <p>
+                            <strong>
+                                <a href="http://dq.cde.ca.gov/dataquest/DQ/EnrTimeRpt.aspx?Level=District&cYear=2008-09&cname=DAVIS%20JOINT%20UNIFIED&cCode=5772678" target="_blank">Would you like to see DJUSD enrollment over time?</a>
+                            </strong>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div role="tabpanel" class="tab-pane fade" id="revenue">
+
+                <h2 style="text-align:center">How much money does the district receive?</h2>
+
+                <div class="row">
+                    <div class="chart-image col-md-1">
+                    </div>
+                    <div class="chart-image col-md-4">
+                        <img name="generalfundpie" src="images/revenue-chart.png" id="generalfundpie" usemap="#m_generalfundpie" alt="General Fund Revenue Piechart" />
+                        <map name="m_generalfundpie" id="m_generalfundpie">
+                        <area shape="poly" coords="178,2,178,173,148,6,149,6,150,5,149,3,148,4,163,4,164,3,164,2,178,2,178,2" href="#trow57" title="Federal" alt="Federal" />
+                        <area shape="poly" coords="177,177,2,169,4,151,6,136,10,121,24,92,31,81,33,77,37,74,57,50,81,32,104,18,128,10,129,9,131,8,133,8,135,7,137,7,139,6,140,6,143,5,147,5,177,177,177,177" href="#trow56" title="Local" alt="Local" />
+                        <area shape="poly" coords="174,178,13,240,6,213,3,200,2,188,2,170,174,178,174,178" href="#trow55" title="Other State" alt="Other State" />
+                        <area shape="poly" coords="190,2,208,4,226,8,243,13,258,21,286,39,310,62,329,88,342,116,351,146,354,176,353,194,350,211,345,228,339,245,323,275,301,301,275,323,245,339,229,345,212,350,194,353,177,354,154,352,131,347,107,339,85,327,63,312,43,292,27,269,14,242,179,178,179,2,190,2,190,2" href="#trow54" title="State / LCFF" alt="State / LCFF" />
+                        </map>
+                        <div class="instructions" style="clear:both">
+                            <p> <em>Move your mouse pointer over areas of the chart to see detailed descriptions of each item.</em>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-4">
+                        <div class="chart-legend rounded" style="display:none">
+                            <div class="clcontent">
+                                <div class="title"></div>
+                                <div class="desc"></div>
+                                <div class="detailx">
+                                    <div class="amount">
+                                        <strong>
+                                            <span></span>
+                                        </strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="clearboth" style="padding:0.5em"></div>
+
+                <h3 style="text-align:center;padding-top:0.5em">Projected DJUSD Revenues for 2016-17 (As of Jul 2016)</h3>
+
+                <table class="table table">
+                    <thead>
+                        <tr name="trow50" id="trow50"><th class="tcol1"></th><th class="tcol2">$ Amount</th><th class="tcol3">% of Total</th><th class="tcol4">Fund Description</th><th class="tcol5">&nbsp;</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr class="subtitle" name="trow52" id="trow52"><td class="tcol1">General Fund</td><td class="tcol2">&nbsp;</td><td class="tcol3">&nbsp;</td><td class="tcol4">This is the chief operating fund, accounting for the ordinary operations of the school district. All transactions except those required or permitted by law to be in another fund are accounted for in this fund. &nbsp;</td><td class="tcol5">&nbsp;</td></tr>
+                        <tr name="trow54" id="trow54"><td class="tcol1">LCFF/Revenue Limit</td><td class="tcol2">$61,914,357</td><td class="tcol3">&nbsp;</td><td class="tcol4">Allocated to the school district based upon the number of students and the amount of time each spends in school</td><td class="tcol5">&nbsp;</td></tr>
+                        <tr name="trow55" id="trow55"><td class="tcol1">Other State Revenue</td><td class="tcol2">$5,860,743</td><td class="tcol3">&nbsp;</td><td class="tcol4">Allocated to the district to provide special services for students. &nbsp;The state has given school districts temporary flexibility to reallocate some of these previously restricted funds for general operating expenses. &nbsp;State lottery funds are included in this category.</td><td class="tcol5">&nbsp;</td></tr>
+                        <tr name="trow56" id="trow56"><td class="tcol1">Local Revenue</td><td class="tcol2">$13,335,122</td><td class="tcol3">&nbsp;</td><td class="tcol4">Education funding from the community through voter approved parcel taxes, donations and miscellaneous sources.</td><td class="tcol5">&nbsp;</td></tr>
+                        <tr name="trow57" id="trow57"><td class="tcol1">Federal Revenue</td><td class="tcol2">$2,496,270</td><td class="tcol3">&nbsp;</td><td class="tcol4">Allocated to districts to provide special services for students but in 2008-09 and 2009-10, this category also includes federal stimulus funds received under the American Recovery and Reinvestment Act.</td><td class="tcol5">&nbsp;</td></tr>
+                        <tr class="subtotal" name="trow59" id="trow59"><td class="tcol1">Subtotal General Fund</td><td class="tcol2">$83,606,492</td><td class="tcol3">90.6%</td><td class="tcol4">&nbsp;</td><td class="tcol5">&nbsp;</td></tr>
+                        <tr class="subtitle" name="trow61" id="trow61"><td class="tcol1">Other Funds</td><td class="tcol2">&nbsp;</td><td class="tcol3">&nbsp;</td><td class="tcol4">&nbsp;</td><td class="tcol5">&nbsp;</td></tr>
+                        <tr name="trow62" id="trow62"><td class="tcol1">Charter Schools</td><td class="tcol2">$4,894,621</td><td class="tcol3">5.3%</td><td class="tcol4">Accounts for the activities of the DaVinci Charter Academy not reported in the General Fund</td><td class="tcol5">&nbsp;</td></tr>
+                        <tr name="trow63" id="trow63"><td class="tcol1">Adult Education</td><td class="tcol2">$610,623</td><td class="tcol3">0.7%</td><td class="tcol4">Accounts for federal, state, and local revenues for adult education programs</td><td class="tcol5">&nbsp;</td></tr>
+                        <tr name="trow64" id="trow64"><td class="tcol1">Child Development</td><td class="tcol2">$336,203</td><td class="tcol3">0.4%</td><td class="tcol4">Accounts for federal, state, and local revenues to operate child development programs</td><td class="tcol5">&nbsp;</td></tr>
+                        <tr name="trow65" id="trow65"><td class="tcol1">Cafeteria</td><td class="tcol2">$2,176,654</td><td class="tcol3">2.4%</td><td class="tcol4">Accounts for federal, state, and local resources to operate the food service program</td><td class="tcol5">&nbsp;</td></tr>
+                        <tr name="trow66" id="trow66"><td class="tcol1">Deferred Maintenance</td><td class="tcol2">$0</td><td class="tcol3">0.0%</td><td class="tcol4">Accounts for state apportionments and the school district's contributions for maintenance including: major repair or replacement of plumbing, heating, air-conditioning, electrical, roofing, and floor systems; exterior and interior painting of school buildings </td><td class="tcol5">&nbsp;</td></tr>
+                        <tr name="trow67" id="trow67"><td class="tcol1">Capital Facilities</td><td class="tcol2">$612,000</td><td class="tcol3">0.7%</td><td class="tcol4">Accounts for fees levied on developers as a condition of approving a development</td><td class="tcol5">&nbsp;</td></tr>
+                        <tr name="trow68" id="trow68"><td class="tcol1">Special Reserve Fund for Capital Outlay Projects</td><td class="tcol2">$10,000</td><td class="tcol3">0.0%</td><td class="tcol4">Accounts for the revenues received from the sale of surplus property (Grande)</td><td class="tcol5">&nbsp;</td></tr>
+                        <tr name="trow69" id="trow69"><td class="tcol1">Building Funds</td><td class="tcol2">$40,000</td><td class="tcol3">0.0%</td><td class="tcol4">Accounts primarily for proceeds from the sale of bonds and may not be used for purposes other than those for which the bonds were issued.</td><td class="tcol5">&nbsp;</td></tr>
+                        <tr name="trow70" id="trow70"><td class="tcol1">Self Insurance</td><td class="tcol2">$850</td><td class="tcol3">0.0%</td><td class="tcol4">Accounts separately for moneys received for self-insurance activities such as health and welfare, and deductible property loss.</td><td class="tcol5">&nbsp;</td></tr>
+                        <tr name="trow71" id="trow71"><td class="tcol1">Foundation Trust Fund</td><td class="tcol2">$3,245</td><td class="tcol3">0.0%</td><td class="tcol4">Accounts for local donation funded student scholarships</td><td class="tcol5">&nbsp;</td></tr>
+                        <tr class="subtotal" name="trow73" id="trow73"><td class="tcol1">Total All Funds</td><td class="tcol2">$92,290,688</td><td class="tcol3">100%</td><td class="tcol4">&nbsp;</td><td class="tcol5">&nbsp;</td></tr>
+                    </tbody>
+                </table>
+               <p>
+                    <strong>
+                        <a href="http://www.djusd.net/cms/page_view?d=x&piid=&vpid=1369296855511" target="_blank">
+                            Would you like to see the complete DJUSD Adopted Budget Report
+                        </a>
+                    </strong>
+                </p>
+
+                <div class="chart-legend rounded" style="margin-left:580px; min-height:0; vertical-align:top">
+                    <div class="instructions">
+                        <p> <em>Move your mouse pointer over areas of the chart to see detailed descriptions of each item.</em>
+                        </p>
+                    </div>
+                    <div class="clcontent" style="display:none">
+                        <div class="title"></div>
+                        <div class="desc" style="font-size:small"></div>
+                        <div class="detailx" style="font-size:small">
+                            <div class="fy1011">
+                                2010-2011:
+                                <span></span>
+                            </div>
+                            <div class="fy1112">
+                                2011-2012:
+                                <span></span>
+                            </div>
+                            <div class="fy1213">
+                                2012-2013:
+                                <span></span>
+                            </div>
+                            <div class="fy1314">
+                                2013-2014:
+                                <span></span>
+                            </div>
+                            <div class="fy1415">
+                                2014-2015:
+                                <span></span>
+                            </div>
+                            <div class="fy1516">
+                                2015-2016:
+                                <span></span>
+                            </div>
+                            <div>(Revenues are actuals except for 2014-2015 and 2015-16 which are estimated or projected)</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearboth" style="padding:0.5em"></div>
+
+                <h3 style="text-align:center;padding-top:0.5em">
+                    District General Fund and Charter School Revenue (as of July 2015)
+                </h3>
+
+
+
+            </div>
+
+
+            <div role="tabpanel" class="tab-pane fade" id="byyear">
+
+                <h2 style="text-align:center">How does district revenue change by year?</h2>
+
+                <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="chart-image col-md-7">
+                        <img name="revenuebyyearchart" src="images/revenue-by-year-chart.png" width="587" height="451" border="0" id="revenuebyyearchart" usemap="#m_revenuebyyearchart" alt="Revenue by year, stacked-bar chart" />
+                        <map name="m_revenuebyyearchart" id="m_revenuebyyearchart">
+                        <area shape="rect" coords="418,439,429,450" href="#trow19" title="Federal Stimulus" alt="Federal Stimulus" />
+                        <area shape="poly" coords="86,142,86,146,32,146,32,142,86,142" href="#trow19" title="Federal Stimulus" alt="Federal Stimulus" />
+                        <area shape="poly" coords="436,46,436,54,383,54,383,46,436,46" href="#trow18" title="Special Programs" alt="Special Programs" />
+                        <area shape="poly" coords="524,56,524,64,470,64,470,56,524,56" href="#trow18" title="Special Programs" alt="Special Programs" />
+                        <area shape="poly" coords="349,82,349,90,295,90,295,82,349,82" href="#trow18" title="Special Programs" alt="Special Programs" />
+                        <area shape="poly" coords="261,106,261,114,207,114,207,106,261,106" href="#trow18" title="Special Programs" alt="Special Programs" />
+                        <area shape="poly" coords="174,123,174,132,120,132,120,123,174,123" href="#trow18" title="Special Programs" alt="Special Programs" />
+                        <area shape="poly" coords="86,147,86,157,32,157,32,147,86,147" href="#trow18" title="Special Programs" alt="Special Programs" />
+                        <area shape="poly" coords="193,440,193,450,183,450,183,440,193,440" href="#trow18" title="Special Programs" alt="Special Programs" />
+                        <area shape="poly" coords="436,55,436,62,383,62,383,55,436,55" href="#trow13" title="Donations and Grants" alt="Donations and Grants" />
+                        <area shape="poly" coords="524,65,524,67,470,67,470,65,524,65" href="#trow13" title="Donations and Grants" alt="Donations and Grants" />
+                        <area shape="poly" coords="349,91,349,101,295,101,295,91,349,91" href="#trow13" title="Donations and Grants" alt="Donations and Grants" />
+                        <area shape="poly" coords="261,115,261,122,207,122,207,115,261,115" href="#trow13" title="Donations and Grants" alt="Donations and Grants" />
+                        <area shape="poly" coords="174,133,174,140,120,140,120,133,174,133" href="#trow13" title="Donations and Grants" alt="Donations and Grants" />
+                        <area shape="poly" coords="86,158,86,166,32,166,32,158,86,158" href="#trow13" title="Donations and Grants" alt="Donations and Grants" />
+                        <area shape="poly" coords="34,440,34,450,24,450,24,440,34,440" href="#trow13" title="Donations and Grants" alt="Donations and Grants" />
+                        <area shape="poly" coords="436,63,436,73,383,73,384,63,436,63" href="#trow12" title="Measure E" alt="Measure E" />
+                        <area shape="poly" coords="524,68,524,77,470,77,470,68,524,68" href="#trow12" title="Measure E" alt="Measure E" />
+                        <area shape="poly" coords="349,102,349,112,295,112,296,102,349,102" href="#trow12" title="Measure E" alt="Measure E" />
+                        <area shape="poly" coords="261,123,261,133,207,133,208,123,261,123" href="#trow12" title="Measure E" alt="Measure E" />
+                        <area shape="poly" coords="429,426,429,436,419,436,420,426,429,426" href="#trow12" title="Measure E" alt="Measure E" />
+                        <area shape="poly" coords="436,74,436,95,383,95,383,74,436,74,436,74" href="#trow11" title="Measure C" alt="Measure C" />
+                        <area shape="poly" coords="524,78,524,100,470,100,470,78,524,78,524,78" href="#trow11" title="Measure C" alt="Measure C" />
+                        <area shape="poly" coords="349,113,349,134,295,134,295,113,349,113,349,113" href="#trow11" title="Measure C" alt="Measure C" />
+                        <area shape="poly" coords="261,134,261,155,207,155,207,134,261,134,261,134" href="#trow11" title="Measure C" alt="Measure C" />
+                        <area shape="poly" coords="174,141,174,163,120,163,120,141,174,141,174,141" href="#trow11" title="Measure C" alt="Measure C" />
+                        <area shape="poly" coords="194,431,192,435,188,437,183,435,182,431,183,426,188,425,192,426,194,431,194,431" href="#trow11" title="Measure C" alt="Measure C" />
+                        <area shape="poly" coords="436,96,436,106,383,106,384,96,436,96" href="#trow9" title="Special Education" alt="Special Education" />
+                        <area shape="poly" coords="524,101,524,109,470,109,470,101,524,101" href="#trow9" title="Special Education" alt="Special Education" />
+                        <area shape="poly" coords="349,135,349,145,295,145,296,135,349,135" href="#trow9" title="Special Education" alt="Special Education" />
+                        <area shape="poly" coords="261,156,261,165,207,165,208,156,261,156" href="#trow9" title="Special Education" alt="Special Education" />
+                        <area shape="poly" coords="174,164,174,178,120,178,120,164,174,164" href="#trow9" title="Special Education" alt="Special Education" />
+                        <area shape="poly" coords="86,165,86,180,32,180,32,165,86,165" href="#trow9" title="Special Education" alt="Special Education" />
+                        <area shape="poly" coords="34,426,34,436,24,436,24,426,34,426" href="#trow9" title="Special Education" alt="Special Education" />
+                        <area shape="poly" coords="436,107,436,141,383,141,383,107,436,107" href="#trow7" title="Categorical Funding" alt="Categorical Funding" />
+                        <area shape="poly" coords="524,110,524,131,470,131,470,110,524,110" href="#trow7" title="Categorical Funding" alt="Categorical Funding" />
+                        <area shape="poly" coords="349,146,349,162,295,162,295,146,349,146" href="#trow7" title="Categorical Funding" alt="Categorical Funding" />
+                        <area shape="poly" coords="261,166,261,180,207,180,207,166,261,166" href="#trow7" title="Categorical Funding" alt="Categorical Funding" />
+                        <area shape="poly" coords="174,179,174,209,120,209,120,179,174,179" href="#trow7" title="Categorical Funding" alt="Categorical Funding" />
+                        <area shape="poly" coords="86,181,86,211,32,211,32,181,86,181" href="#trow7" title="Categorical Funding" alt="Categorical Funding" />
+                        <area shape="poly" coords="429,413,429,422,419,422,420,413,429,413" href="#trow7" title="Categorical Funding" alt="Categorical Funding" />
+                        <area shape="poly" coords="524,132,524,147,470,147,470,132,524,132" href="#trow6" alt="" />
+                        <area shape="poly" coords="436,142,436,157,383,157,383,142,436,142" href="#trow6" alt="" />
+                        <area shape="poly" coords="349,163,349,177,295,177,295,163,349,163" href="#trow6" alt="" />
+                        <area shape="poly" coords="261,181,261,193,207,193,207,181,261,181" href="#trow6" alt="" />
+                        <area shape="poly" coords="174,210,174,220,120,220,121,210,174,210" href="#trow6" alt="" />
+                        <area shape="poly" coords="86,212,86,220,32,220,33,212,86,212" href="#trow6" alt="" />
+                        <area shape="poly" coords="193,413,193,422,183,422,184,413,193,413" href="#trow6" alt="" />
+                        <area shape="poly" coords="524,148,524,364,470,364,470,148,524,148" href="#trow5" title="Per Student Funding" alt="Per Student Funding" />
+                        <area shape="poly" coords="436,158,436,364,383,364,383,158,436,158" href="#trow5" title="Per Student Funding" alt="Per Student Funding" />
+                        <area shape="poly" coords="349,178,349,364,295,364,295,178,349,178" href="#trow5" title="Per Student Funding" alt="Per Student Funding" />
+                        <area shape="poly" coords="261,194,261,364,207,364,207,194,261,194" href="#trow5" title="Per Student Funding" alt="Per Student Funding" />
+                        <area shape="poly" coords="86,221,86,364,32,364,32,221,86,221" href="#trow5" title="Per Student Funding" alt="Per Student Funding" />
+                        <area shape="poly" coords="174,221,174,364,120,364,120,221,174,221" href="#trow5" title="Per Student Funding" alt="Per Student Funding" />
+                        <area shape="poly" coords="34,413,34,422,24,422,24,413,34,413" href="#trow5" title="Per Student Funding" alt="Per Student Funding" />
+                        </map>
+                        <div class="instructions" style="clear:both">
+                            <p> <em>Move your mouse pointer over areas of the chart to see detailed descriptions of each item.</em>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 chart-legend rounded">
+                        <div class="instructions">
+                            <p> <em>Move your mouse pointer over areas of the chart to see detailed descriptions of each item.</em>
+                            </p>
+                        </div>
+                        <div class="clcontent" style="display:none">
+                            <div class="title"></div>
+                            <div class="desc" style="font-size:small"></div>
+                            <div class="detailx" style="font-size:small">
+                                <div class="fy1112">
+                                    2011-2012:
+                                    <span></span>
+                                </div>
+                                <div class="fy1213">
+                                    2012-2013:
+                                    <span></span>
+                                </div>
+                                <div class="fy1314">
+                                    2013-2014:
+                                    <span></span>
+                                </div>
+                                <div class="fy1415">
+                                    2014-2015:
+                                    <span></span>
+                                </div>
+                                <div class="fy1516">
+                                    2015-2016:
+                                    <span></span>
+                                </div>
+                                <div class="fy1617">
+                                    2015-2016:
+                                    <span></span>
+                                </div>
+                                <div>(Revenues are actuals except for 2015-2016 and 2016-17 which are estimated or projected)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="clearboth" style="padding:0.5em"></div>
+
+                <h3 style="text-align:center;padding-top:0.5em">
+                    District General Fund and Charter School Revenue (as of June 2016)
+                </h3>
+
+                <table class="table" id="yearbyyeartable">
+                    <thead>
+                        <tr name="trow1" id="trow1"><th class="tcol1">&nbsp;</th><th class="tcol2">2011-12</th><th class="tcol3">2012-13</th><th class="tcol4">2013-14</th><th class="tcol5">2014-15</th><th class="tcol6">2015-16 (Estimated)</th><th class="tcol7">2016-17 (Projected)</th><th class="tcol8">Descriptions</th><th class="tcol9">&nbsp;</th><th class="tcol10">&nbsp;</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr class="subtitle" name="trow2" id="trow2"><td class="tcol1">State Revenue</td><td class="tcol2">&nbsp;</td><td class="tcol3">&nbsp;</td><td class="tcol4">&nbsp;</td><td class="tcol5">&nbsp;</td><td class="tcol6">&nbsp;</td><td class="tcol7">&nbsp;</td><td class="tcol8">Funding provided by the state of California</td><td class="tcol9">&nbsp;</td><td class="tcol10">&nbsp;</td></tr>
+                        <tr name="trow3" id="trow3"><td class="tcol1">COLA (Unfunded)</td><td class="tcol2">$4,882,350</td><td class="tcol3">$6,369,001</td><td class="tcol4">&nbsp;</td><td class="tcol5">&nbsp;</td><td class="tcol6">&nbsp;</td><td class="tcol7">&nbsp;</td><td class="tcol8">Cost of Living Adjustment (COLA): In good economic years, the state provides an increase in prior year funding so that districts can meet routine cost increases. &nbsp;In poor economic years, COLA is reduced or unfunded.</td><td class="tcol9">&nbsp;</td><td class="tcol10">&nbsp;</td></tr>
+                        <tr name="trow4" id="trow4"><td class="tcol1">Deficit/LCFF Funding GAP</td><td class="tcol2">$5,613,104</td><td class="tcol3">$5,254,269</td><td class="tcol4">$14,557,729</td><td class="tcol5">$10,562,502</td><td class="tcol6">$5,274,256</td><td class="tcol7">$2,338,286</td><td class="tcol8">Funding owed to the district by the state, but not paid</td><td class="tcol9">&nbsp;</td><td class="tcol10">&nbsp;</td></tr>
+                        <tr name="trow5" id="trow5"><td class="tcol1">Per Student Funding</td><td class="tcol2">$41,123,481</td><td class="tcol3">$41,146,951</td><td class="tcol4">$48,757,875</td><td class="tcol5">$53,563,456</td><td class="tcol6">$59,172,312</td><td class="tcol7">$61,914,357</td><td class="tcol8">Ongoing money allocated to the school district based upon the number of students and the amount of time each spends in school. &nbsp;The district receives the same amount of per pupil funding for students, whether they are attending the general education program or a magnet (e.g. GATE, Spanish Immersion, Montessori) program. &nbsp;</td><td class="tcol9">&nbsp;</td><td class="tcol10">&nbsp;</td></tr>
+                        <tr name="trow6" id="trow6"><td class="tcol1">Charter School Per Student Funding</td><td class="tcol2">$2,753,378</td><td class="tcol3">$3,186,178</td><td class="tcol4">$3,838,419</td><td class="tcol5">$4,142,797</td><td class="tcol6">$4,367,562</td><td class="tcol7">$4,540,652</td><td class="tcol8">Ongoing money allocated to DaVinci Academy based upon the number of students and the amount of time each spends in school. &nbsp;</td><td class="tcol9">&nbsp;</td><td class="tcol10">&nbsp;</td></tr>
+                        <tr name="trow7" id="trow7"><td class="tcol1">Categorical Funding</td><td class="tcol2">$8,353,262</td><td class="tcol3">$8,384,798</td><td class="tcol4">$3,891,886</td><td class="tcol5">$4,592,308</td><td class="tcol6">$9,371,542</td><td class="tcol7">$5,860,743</td><td class="tcol8">Ongoing money allocated to the district to provide special programs for students. &nbsp;The state has granted temporary flexibility to reallocate previously restricted funds for general operating expenses</td><td class="tcol9">&nbsp;</td><td class="tcol10">&nbsp;</td></tr>
+                        <tr name="trow8" id="trow8"><td class="tcol1">Charter School Categorical Funding</td><td class="tcol2">$323,924</td><td class="tcol3">$399,837</td><td class="tcol4">$271,271</td><td class="tcol5">$254,871</td><td class="tcol6">$679,274</td><td class="tcol7">$344,177</td><td class="tcol8">Ongoing money allocated to the DaVinci Charter School to provide special programs for students.</td><td class="tcol9">&nbsp;</td><td class="tcol10">&nbsp;</td></tr>
+                        <tr name="trow9" id="trow9"><td class="tcol1">Special Education</td><td class="tcol2">$4,387,698</td><td class="tcol3">$4,401,489</td><td class="tcol4">$2,829,560</td><td class="tcol5">$2,992,033</td><td class="tcol6">$3,047,577</td><td class="tcol7">$2,689,632</td><td class="tcol8">Ongoing funds to provide services to students with special needs. &nbsp;These are state funds passed through to the Special Education Local Plan Area (SELPA) and on to the district.</td><td class="tcol9">&nbsp;</td><td class="tcol10">&nbsp;</td></tr>
+                        <tr class="subtitle" name="trow10" id="trow10"><td class="tcol1">Local Revenue</td><td class="tcol2">&nbsp;</td><td class="tcol3">&nbsp;</td><td class="tcol4">&nbsp;</td><td class="tcol5">&nbsp;</td><td class="tcol6">&nbsp;</td><td class="tcol7">&nbsp;</td><td class="tcol8">Funding coming from sources within Davis</td><td class="tcol9">&nbsp;</td><td class="tcol10">&nbsp;</td></tr>
+                        <tr name="trow11" id="trow11"><td class="tcol1">Measure C</td><td class="tcol2">&nbsp;</td><td class="tcol3">$6,350,910</td><td class="tcol4">$6,461,854</td><td class="tcol5">$6,432,709</td><td class="tcol6">$6,434,240</td><td class="tcol7">$6,434,240</td><td class="tcol8">Local parcel tax ($327/parcel) that replaced Measure Q &amp; W and supplements school funding from July 1, 2012 to June 30, 2016.</td><td class="tcol9">&nbsp;</td><td class="tcol10">&nbsp;</td></tr>
+                        <tr name="trow12" id="trow12"><td class="tcol1">Measure E</td><td class="tcol2">&nbsp;</td><td class="tcol3">&nbsp;</td><td class="tcol4">$3,080,479</td><td class="tcol5">$3,079,728</td><td class="tcol6">$3,074,484</td><td class="tcol7">$3,074,484</td><td class="tcol8">Local parcel tax renewal ($204/parcel) intended to backfill state funding reductions from July 1, 2013 to June 30, 2016.</td><td class="tcol9">&nbsp;</td><td class="tcol10">&nbsp;</td></tr>
+                        <tr name="trow13" id="trow13"><td class="tcol1">Donations and Grants</td><td class="tcol2">$2,252,194</td><td class="tcol3">$2,355,811</td><td class="tcol4">$2,051,144</td><td class="tcol5">$2,867,241</td><td class="tcol6">$2,123,928</td><td class="tcol7">$773,766</td><td class="tcol8">One-time community contributions including a $1.5 million grant from the Davis Schools Foundation in 2008-09</td><td class="tcol9">&nbsp;</td><td class="tcol10">&nbsp;</td></tr>
+                        <tr name="trow14" id="trow14"><td class="tcol1">&nbsp;</td><td class="tcol2">&nbsp;</td><td class="tcol3">&nbsp;</td><td class="tcol4">&nbsp;</td><td class="tcol5">&nbsp;</td><td class="tcol6">&nbsp;</td><td class="tcol7">&nbsp;</td><td class="tcol8">&nbsp;</td><td class="tcol9">&nbsp;</td><td class="tcol10">&nbsp;</td></tr>
+                        <tr name="trow15" id="trow15"><td class="tcol1">Other Local Revenue</td><td class="tcol2">$4,921,410</td><td class="tcol3">$4,846,020</td><td class="tcol4">$3,204,995</td><td class="tcol5">$3,359,262</td><td class="tcol6">$3,420,689</td><td class="tcol7">$3,052,632</td><td class="tcol8">Miscellaneous revenue from local sources</td><td class="tcol9">&nbsp;</td><td class="tcol10">&nbsp;</td></tr>
+                        <tr name="trow16" id="trow16"><td class="tcol1">Charter School Donations and Grants</td><td class="tcol2">$67,717</td><td class="tcol3">$103,034</td><td class="tcol4">$54,426</td><td class="tcol5">$140,815</td><td class="tcol6">$69,594</td><td class="tcol7">$9,792</td><td class="tcol8">Donations and miscellaneous local funds for DaVinci Academy</td><td class="tcol9">&nbsp;</td><td class="tcol10">&nbsp;</td></tr>
+                        <tr class="subtitle" name="trow17" id="trow17"><td class="tcol1">Federal Revenue</td><td class="tcol2">&nbsp;</td><td class="tcol3">&nbsp;</td><td class="tcol4">&nbsp;</td><td class="tcol5">&nbsp;</td><td class="tcol6">&nbsp;</td><td class="tcol7">&nbsp;</td><td class="tcol8">Funding provided by the United States government</td><td class="tcol9">&nbsp;</td><td class="tcol10">&nbsp;</td></tr>
+                        <tr name="trow18" id="trow18"><td class="tcol1">Special Programs</td><td class="tcol2">$2,961,721</td><td class="tcol3">$2,887,161</td><td class="tcol4">$2,683,237</td><td class="tcol5">$2,713,690</td><td class="tcol6">$2,633,983</td><td class="tcol7">$2,496,270</td><td class="tcol8">Ongoing restricted money allocated to districts to provide specified services for students including special education programs</td><td class="tcol9">&nbsp;</td><td class="tcol10">&nbsp;</td></tr>
+                        <tr name="trow19" id="trow19"><td class="tcol1">Federal Stimulus Funds</td><td class="tcol2">$1,536,470</td><td class="tcol3">$0</td><td class="tcol4">$0</td><td class="tcol5">$0</td><td class="tcol6">$0</td><td class="tcol7">&nbsp;</td><td class="tcol8">One-time money received under the American Recovery and Reinvestment Act &amp; Jobs Bill</td><td class="tcol9">&nbsp;</td><td class="tcol10">&nbsp;</td></tr>
+                        <tr name="trow20" id="trow20"><td class="tcol1">Charter School Special Programs</td><td class="tcol2">$92,430</td><td class="tcol3">$0</td><td class="tcol4">$0</td><td class="tcol5">$0</td><td class="tcol6">$0</td><td class="tcol7">&nbsp;</td><td class="tcol8">One-time restricted money allocated to DaVinci Charter to provide specified services</td><td class="tcol9">&nbsp;</td><td class="tcol10">&nbsp;</td></tr>
+                        <tr class="subtitle" name="trow21" id="trow21"><td class="tcol1">Totals</td><td class="tcol2">&nbsp;</td><td class="tcol3">&nbsp;</td><td class="tcol4">&nbsp;</td><td class="tcol5">&nbsp;</td><td class="tcol6">&nbsp;</td><td class="tcol7">&nbsp;</td><td class="tcol8">&nbsp;</td><td class="tcol9">&nbsp;</td><td class="tcol10">&nbsp;</td></tr>
+                        <tr name="trow22" id="trow22"><td class="tcol1">Total Funded Revenue</td><td class="tcol2">$78,320,796</td><td class="tcol3">$77,255,429</td><td class="tcol4">$77,125,146</td><td class="tcol5">$84,138,910</td><td class="tcol6">$94,395,185</td><td class="tcol7">$91,190,745</td><td class="tcol8">&nbsp;</td><td class="tcol9">&nbsp;</td><td class="tcol10">&nbsp;</td></tr>
+                        <tr name="trow24" id="trow24"><td class="tcol1">General Fund</td><td class="tcol2">$75,083,347</td><td class="tcol3">$73,566,380</td><td class="tcol4">$72,961,030</td><td class="tcol5">$79,600,427</td><td class="tcol6">$89,278,755</td><td class="tcol7">$86,296,124</td><td class="tcol8">&nbsp;</td><td class="tcol9">&nbsp;</td><td class="tcol10">&nbsp;</td></tr>
+                        <tr name="trow25" id="trow25"><td class="tcol1">Charter School Fund</td><td class="tcol2">$3,237,449</td><td class="tcol3">$3,689,049</td><td class="tcol4">$4,164,116</td><td class="tcol5">$4,538,483</td><td class="tcol6">$5,116,430</td><td class="tcol7">$4,894,621</td><td class="tcol8">&nbsp;</td><td class="tcol9">&nbsp;</td><td class="tcol10">&nbsp;</td></tr>
+                        <tr class="subtitle" name="trow28" id="trow28"><td class="tcol1">Breakdowns</td><td class="tcol2">&nbsp;</td><td class="tcol3">&nbsp;</td><td class="tcol4">&nbsp;</td><td class="tcol5">&nbsp;</td><td class="tcol6">&nbsp;</td><td class="tcol7">&nbsp;</td><td class="tcol8">&nbsp;</td><td class="tcol9">&nbsp;</td><td class="tcol10">&nbsp;</td></tr>
+                        <tr name="trow27" id="trow27"><td class="tcol1">Number of Students (adjusted for average daily attendance)</td><td class="tcol2">$8,285</td><td class="tcol3">$8,290</td><td class="tcol4">$8,253</td><td class="tcol5">$8,247</td><td class="tcol6">$8,205</td><td class="tcol7">$8,197</td><td class="tcol8">&nbsp;</td><td class="tcol9">&nbsp;</td><td class="tcol10">&nbsp;</td></tr>
+                        <tr name="trow29" id="trow29" class="subtotal"><td class="tcol1">Per Pupil Funding</td><td class="tcol2">$9,453</td><td class="tcol3">$9,320</td><td class="tcol4">$9,345</td><td class="tcol5">$10,202</td><td class="tcol6">$11,505</td><td class="tcol7">$11,125</td><td class="tcol8">&nbsp;</td><td class="tcol9">&nbsp;</td><td class="tcol10">&nbsp;</td></tr>
+                    </tbody>
+                </table>
+
+            </div>
+
+
+            <div role="tabpanel" class="tab-pane fade" id="expenditures">
+
+                <h2 style="text-align:center">How much money does the district spend?</h2>
+
+                <div class="clearboth" style="padding:0.5em"></div>
+
+                <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="chart-image col-md-6">
+                        <img name="expenditureschart" src="images/expenditures-chart.png" width="346" height="345" border="0" id="expenditureschart" usemap="#m_expenditureschart" alt="Expenditures Pie Chart" />
+                        <map name="m_expenditureschart" id="m_expenditureschart">
+                        <area shape="poly" coords="174,2,174,172,75,34,95,20,117,10,140,4,162,2,174,2,174,2" href="#trow88" title="Plant Services" alt="Plant Services" />
+                        <area shape="poly" coords="172,171,27,91,25,90,25,88,28,83,32,78,33,76,34,76,52,54,63,43,74,36,172,171,172,171" href="#trow87" title="General Administration" alt="General Administration" />
+                        <area shape="poly" coords="170,172,3,172,3,162,5,144,9,126,15,108,24,91,170,172,170,172" href="#trow86" title="Pupil Services" alt="Pupil Services" />
+                        <area shape="poly" coords="172,173,46,287,37,276,29,264,15,237,6,208,3,184,3,173,172,173,172,173" href="#trow85" title="Instruction-Related Services" alt="Instruction-Related Services" />
+                        <area shape="poly" coords="186,2,205,4,222,8,239,14,255,21,269,30,282,40,304,62,322,88,334,116,342,145,345,175,344,192,341,209,336,225,330,241,314,269,292,294,267,315,238,330,206,340,190,343,174,344,142,341,126,337,109,331,93,323,77,314,61,302,47,288,175,173,173,171,173,2,186,2,186,2" href="#trow84" title="Classroom Instruction" alt="Classroom Instruction" />
+                        </map>
+                    </div>
+                    <div class="chart-legend rounded col-md-4" style="min-height:0">
+                        <div class="instructions">
+                            <em>
+                                Move your mouse pointer over areas of the chart to see detailed descriptions of each item.
+                            </em>
+                        </div>
+                        <div class="clcontent" style="display:none">
+                            <div class="title"></div>
+                            <div class="desc">
+                                Move your mouse pointer over areas of the chart to see detailed descriptions of each item.
+                            </div>
+                            <div class="detailx">
+                                <div class="dollars">
+                                    <strong>
+                                        <span></span>
+                                    </strong>
+                                </div>
+                                <div class="percent">
+                                    <strong>
+                                        <span></span>
+                                        of General Fund Expenditures
+                                    </strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="clearboth" style="padding:0.5em"></div>
+
+                <h3 style="text-align:center">
+                    Projected DJUSD Expenditures for 2016-176 by Function (As of Jul 2016)
+                </h3>
+
+                <table class="table" id="extenditurestable">
+                    <thead>
+                        <tr name="trow82" id="trow82"><td class="tcol1">&nbsp;</td><td class="tcol2">$ Amount</td><td class="tcol3">% of Total</td><td class="tcol4">Fund Description</td><td class="tcol5">&nbsp;</td></tr>
+                    </thead>
+                    <tbody>
+                        <tr class="subtitle" name="trow83" id="trow83"><td class="tcol1">General Fund</td><td class="tcol2">&nbsp;</td><td class="tcol3">&nbsp;</td><td class="tcol4">This is the chief operating fund, accounting for the ordinary operations of the school district. All transactions except those required or permitted by law to be in another fund are accounted for in this fund. &nbsp;</td><td class="tcol5">&nbsp;</td></tr>
+                        <tr name="trow84" id="trow84"><td class="tcol1">Classroom Instruction</td><td class="tcol2">$52,487,141</td><td class="tcol3">62%</td><td class="tcol4">Teachers, para-educators, instructional supplies and services</td><td class="tcol5">&nbsp;</td></tr>
+                        <tr name="trow85" id="trow85"><td class="tcol1">Instruction-related Services</td><td class="tcol2">$9,685,885</td><td class="tcol3">11%</td><td class="tcol4">Supervision of instruction/assessment, library services, teacher staff development, and summer school</td><td class="tcol5">&nbsp;</td></tr>
+                        <tr name="trow86" id="trow86"><td class="tcol1">Pupil Services</td><td class="tcol2">$6,574,583</td><td class="tcol3">8%</td><td class="tcol4">Counseling and college planning; psychology and individual learning assessments; nurses for screening and health education; school climate; student behavior, attendance, suspensions and expulsions; complaints and investigations; safety and emergency preparedness; grief and crisis counseling</td><td class="tcol5">&nbsp;</td></tr>
+                        <tr name="trow87" id="trow87"><td class="tcol1">General Administration</td><td class="tcol2">$5,872,279</td><td class="tcol3">7%</td><td class="tcol4">Education oversight, human resources, budget and payroll, student attendance reporting; legal services and elections; technology and community relations</td><td class="tcol5">&nbsp;</td></tr>
+                        <tr name="trow88" id="trow88"><td class="tcol1">Plant Services</td><td class="tcol2">$8,217,513</td><td class="tcol3">10%</td><td class="tcol4">Utilities; custodial; landscape, irrigation, and field maintenance; campus safety and security; telecommunications</td><td class="tcol5">&nbsp;</td></tr>
+                        <tr name="trow89" id="trow89"><td class="tcol1">Ancillary Services &amp; Community</td><td class="tcol2">$903,594</td><td class="tcol3">1%</td><td class="tcol4">Miscellaneous services includes Athletics programs &amp; Facilities Use</td><td class="tcol5">&nbsp;</td></tr>
+                        <tr name="trow90" id="trow90"><td class="tcol1">Other Outgo</td><td class="tcol2">$753,310</td><td class="tcol3">1%</td><td class="tcol4">Miscellaneous expenditures including debt service for leases &amp; Special Education program fees for other local educational agencies</td><td class="tcol5">&nbsp;</td></tr>
+                        <tr name="trow91" id="trow91"><td class="tcol1">&nbsp;</td><td class="tcol2">&nbsp;</td><td class="tcol3">&nbsp;</td><td class="tcol4">&nbsp;</td><td class="tcol5">&nbsp;</td></tr>
+                        <tr class="subtotal" name="trow92" id="trow92"><td class="tcol1">Subtotal General Fund</td><td class="tcol2">$84,494,305</td><td class="tcol3">80.7%</td><td class="tcol4">&nbsp;</td><td class="tcol5">&nbsp;</td></tr>
+                        <tr class="subtitle" name="trow94" id="trow94"><td class="tcol1">Other Funds</td><td class="tcol2">&nbsp;</td><td class="tcol3">&nbsp;</td><td class="tcol4">&nbsp;</td><td class="tcol5">&nbsp;</td></tr>
+                        <tr name="trow95" id="trow95"><td class="tcol1">Charter Schools</td><td class="tcol2">$5,148,933</td><td class="tcol3">4.9%</td><td class="tcol4">DaVinci Charter Academy expenses</td><td class="tcol5">&nbsp;</td></tr>
+                        <tr name="trow96" id="trow96"><td class="tcol1">Adult Education</td><td class="tcol2">$514,138</td><td class="tcol3">0.5%</td><td class="tcol4">Adult education program expenses</td><td class="tcol5">&nbsp;</td></tr>
+                        <tr name="trow97" id="trow97"><td class="tcol1">Child Development</td><td class="tcol2">$379,641</td><td class="tcol3">0.4%</td><td class="tcol4">Expenses for operating child development programs</td><td class="tcol5">&nbsp;</td></tr>
+                        <tr name="trow98" id="trow98"><td class="tcol1">Cafeteria</td><td class="tcol2">$2,247,454</td><td class="tcol3">2.1%</td><td class="tcol4">Expenses for operating the food service program</td><td class="tcol5">&nbsp;</td></tr>
+                        <tr name="trow99" id="trow99"><td class="tcol1">Deferred Maintenance</td><td class="tcol2">$0</td><td class="tcol3">0.0%</td><td class="tcol4">Expenses for major repair or replacement of plumbing, heating, air-conditioning, electrical, roofing, and floor systems; exterior and interior painting of school buildings</td><td class="tcol5">&nbsp;</td></tr>
+                        <tr name="trow100" id="trow100"><td class="tcol1">Capital Facilities</td><td class="tcol2">$702,588</td><td class="tcol3">0.7%</td><td class="tcol4">Expensed funds from fees levied on developers or other agencies as a condition of approving a development</td><td class="tcol5">&nbsp;</td></tr>
+                        <tr name="trow101" id="trow101"><td class="tcol1">Special Reserve Fund for Capital Outlay Projects</td><td class="tcol2">$1,025,000</td><td class="tcol3">1.0%</td><td class="tcol4">Expensed funds from the sale of surplus property (Grande)</td><td class="tcol5">&nbsp;</td></tr>
+                        <tr name="trow102" id="trow102"><td class="tcol1">Building Funds</td><td class="tcol2">$10,115,810</td><td class="tcol3">9.7%</td><td class="tcol4">Expensed funds from proceeds of the sale of bonds and may not be used for any purposes other than those for which the bonds were issued.</td><td class="tcol5">&nbsp;</td></tr>
+                        <tr name="trow103" id="trow103"><td class="tcol1">Self Insurance</td><td class="tcol2">$15,000</td><td class="tcol3">0.0%</td><td class="tcol4">Expenses for self-insurance activities such as , health and welfare, and deductible property &amp; liability losses.</td><td class="tcol5">&nbsp;</td></tr>
+                        <tr name="trow104" id="trow104"><td class="tcol1">Foundation Trust Fund</td><td class="tcol2">$3,000</td><td class="tcol3">0.0%</td><td class="tcol4">Expended funds for local donation funded student scholarships</td><td class="tcol5">&nbsp;</td></tr>
+                        <tr class="subtotal" name="trow106" id="trow106"><td class="tcol1">Total All Funds</td><td class="tcol2">$104,645,869</td><td class="tcol3">100%</td><td class="tcol4">&nbsp;</td><td class="tcol5">&nbsp;</td></tr>
+                    </tbody>
+                </table>
+
+                <p>
+                    <strong>
+                        <a href="http://www.djusd.net/cms/page_view?d=x&piid=&vpid=1369296855511" target="_blank">Would you like to see the DJUSD Adopted Budget?</a>
+                    </strong>
+                </p>
+
+            </div>
+
+
+            <div role="tabpanel" class="tab-pane fade in active" id="finance">
+
+                <div id="paying">
+
+                    <h2>How do we pay for California Schools?</h2>
+
+                    <div class="row">
+
+                        <div class="noprint col-md-1"></div>
+                        <div class="noprint col-md-8">
+                            <iframe src="https://player.vimeo.com/video/83705103" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                            <p><a href="http://vimeo.com/83705103">California's Local Control Funding Formula</a> from <a href="http://vimeo.com/user24095721">EdSource</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+                        </div>
+
+                        <div class="col-md-3">
+                            <p>
+                                About 85% of the money for California schools comes from the state. The rest comes from the federal government and local sources.
+                            </p>
+
+                            <p>
+                                Our state amount is based on the number of students in the district and how much time each student spends in school. It also depends on Proposition 98 and the Local Control Funding Formula.
+                            </p>
+                        </div>
+                    </div>
+
+                    <h3>What is the Local Control Funding Formula?</h3>
+
+                    <p>California school finance changed dramatically with the passage of the state budget in July 2013.  Beginning with the 2013-14 school year, school districts and charter schools receive funding under the Local Control Funding Formula (LCFF) with two goals: to improve outcomes for students and to allow more decisions to be made locally about how dollars are spent to achieve better results.</p>
+
+                    <p>Each district now receives a “base grant” for every student.  The majority of California’s education dollars will fund base grants.</p>
+
+                    <p style="text-align:center"><a href="http://edsource.org/local-control-funding-formula-guide#.UyzKZse0aNw" target="_blank"><img src="http://edsource.org/wp-content/profiles/lcff-guide/assets/lcff-deep-1.png" height="287" width="500" /></a>
+                        <br />
+                        Source: <a href="http://edsource.org/local-control-funding-formula-guide#.UyzKZse0aNw">EdSource.org</a>
+                    </p>
+
+
+                    <p>In addition to base grants, districts receive a “supplemental grant” of 20% of the base for every high needs student.  These include students who come from low-income families, those learning English and those living in foster care.  Districts with more than 55% high needs students will also receive a “concentration grant” for the number of students over that threshold.</p>
+
+                    <p>27% of students in the Davis Joint Unified School District qualify as high needs.  The district will receive a supplemental grant based upon this percentage, but does not qualify for a concentration grant.</p>
+
+                    <p>Davis received $6,333 for each student in 2013-14.  That amount is expected to grow to $9,463 in 2020-21 when the state plans to fully implement the Local Control Funding Formula.</p>
+
+
+                    <p><strong><a href="http://edsource.org/wp-content/iframe/graphics/lcff-school-compare/districts.html">Would you like to see how our district funding compares to other districts?</a></strong> (EdSource)</p>
+
+                    <p>Under the LCFF, districts prepare a Local Control and Accountability Plan that describes how education dollars are spent to address state priorities:</p>
+
+                    <ul>
+                    <li>Conditions of learning, including access to core services, implementation of state standards and course access.</li>
+                    <li>Pupil outcomes, including, student achievement and other student outcomes.</li>
+                    <li>Engagement, including parent involvement, student engagement and school climate.</li>
+                    </ul>
+
+                    <p style="text-align:center"><a href="http://edsource.org/local-control-funding-formula-guide#.UyzKZse0aNw" target="_blank"><img src="http://edsource.org/wp-content/profiles/lcff-guide/assets/lcff-deep-intro-long.png" /></a><br />
+                        Source: <a href="http://edsource.org/local-control-funding-formula-guide#.UyzKZse0aNw">EdSource.org</a>
+                    </p>
+
+                    <p>The district prepared its first Local Control and Accountability Plan in 2014 and continues to engage stakeholders in creation, annual review and approval. A public hearing is held in June prior to final approval of the plan. The district then submits the plan to the Yolo County Office of Education for review.</p>
+
+                    <p><strong><a href="http://www.djusd.net/cms/page_view?d=x&piid=&vpid=1390734543156" target="_blank">Would you like to learn more about the district’s Local Control and Accountability Plan?</a></strong> (DJUSD)</p>
+
+                    <h3>What is Proposition 98?</h3>
+                    <p>
+                        California voters passed Proposition 98 in 1988 and again in 1990 to guarantee a minimum level of funding for K-14 public education. This level depends on the state’s economy. When the economy does well, schools get more money. In poor economic years, schools get less.
+                    </p>
+
+                    <p><strong><a href="http://www.lao.ca.gov/2009/edu/prop98_primer/prop98_primer.aspx" target="_blank">Would you like to learn more about Proposition 98?</a></strong> (Legislative Analyst's Office, Video)</p>
+
+
+                    <h3 style="clear:both">How have recent state budgets affected Davis public schools?</h3>
+                    <p>Recent state budget decisions have caused the state to:</p>
+                    <ul>
+                        <li>
+                            Restore the amount of money they send to schools. With the passage of Proposition 30 in 2012, the state began to restore funding to schools in 2013-14.  Districts receive these dollars under the new Local Control Funding Formula.
+                        </li>
+                        <li>
+                            Eliminate deferred state funding. During the budget crisis, districts received funding a year late from the state.  These deferred payments grew to nearly $10 billion statewide, but have now been fully repaid to schools.
+                        </li>
+
+                    </ul>
+
+
+                    <h3>What is Proposition 30</h3>
+
+                    <p>
+                        Proposition 30 was placed on the November 6, 2012 ballot by Governor Jerry Brown.  It’s purpose was to prevent more reductions to state funding for education.
+                    </p>
+
+                    <p>
+                        As approved by the majority of California voters, the measure:
+                    </p>
+
+                    <ul>
+                        <li>
+                            Increased the sales tax rate by one-quarter cent for every dollar for four years
+                        </li>
+                        <li>
+                            Increased personal income tax rates on upper-income taxpayers for seven years
+                        </li>
+                        <li>
+                            Will raise about $6 billion in additional annual state revenues through 2016–17, with smaller amounts in 2017–18 and 2018–19.
+                        </li>
+                    </ul>
+
+                    <p>
+                        These additional revenues are available to help balance state budget only through 2018–19.
+                    </p>
+
+                    <p><strong><a href="http://ballotpedia.org/California_Proposition_30,_Sales_and_Income_Tax_Increase_(2012)" target="_blank">Would you like to learn more about Proposition 30?</a></strong> (BallotPedia article)</p>
+
+                    <h3>Would you like to learn more about California school finance?</h3>
+                    <ul>
+                    <li><a href="http://edsource.org/wp-content/publications/10-questions.pdf" target="_blank">School Funding Undergoes Major Reform: 10 Frequently Asked Questions on the LCFF</a> (EdSource, 2014) <a href="http://edsource.org/today/wp-content/uploads/spanish.pdf">Spanish version</a></li>
+                    <li><a href="http://edsource.org/2015/2015-16-state-education-budget-by-the-numbers/81895">2014-15 State Education Budget by the Numbers</a> (EdSource, 2015)</li>
+                    <li><a href="http://www.cde.ca.gov/fg/aa/lc/lcffoverview.asp">Local Control Funding Formula Overview</a> (CA Dept. of Education, 2015)</li>
+                    <li><a href="http://www.ed-data.k12.ca.us/Pages/Home.aspx">Ed-Data: Fiscal, Demographic and Performance Data on California’s K-12 Schools</a> (Ed-data, 2015)</li>
+                    <li><a href="http://lcff.wested.org/">Local Control Funding Formula</a> (WestEd, 2015)</li>
+                    <li><a href="http://edsource.org/topic/school-finance">California School Finance</a> (EdSource, 2015)</li>
+                    </ul>
+                    <p><strong><a href="http://embed.verite.co/timeline/?source=0AnZDmytGK63SdEJhSFR2MkdTNk94ZHRsa0poYjNxcmc&font=Bevan-PotanoSans&maptype=toner&lang=en&width=1000&height=700">Would you like to see a brief history of school finance reform in California?</a></strong> (EdSource, 2014)</p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+<script>
+
+$(document).ready(function() {
+    // show active tab on reload
+    if (location.hash !== '') $('a[href="' + location.hash + '"]').tab('show');
+
+    // remember the hash in the URL without jumping
+    $('a[data-toggle="tab"]').on('shown.bs.tab', function(e) {
+       if(history.pushState) {
+            history.pushState(null, null, '#'+$(e.target).attr('href').substr(1));
+       } else {
+            location.hash = '#'+$(e.target).attr('href').substr(1);
+       }
+    });
+
+    // revenue chart mouseovers
+    $('#m_generalfundpie area').mouseover(function () {
+        $('.chart-legend').hide();
+        var myid = $(this).attr('href');
+        var title = $(myid + ' td:first-child').text();
+        var desc = $(myid + ' td:nth-child(4)').text();
+        var amount = $(myid + ' td:nth-child(2)').text()
+        $('.chart-legend .title').text(title);
+        $('.chart-legend .desc').text(desc);
+        $('.chart-legend .amount span').text(amount);
+
+        $('.chart-legend').fadeIn();
+    });
+
+    // revenue years mouseovers
+    $('#m_revenuebyyearchart area').mouseover(function () {
+        $('.chart-legend .instructions').hide();
+        var myid = "#yearbyyeartable tr" + $(this).attr('href');
+        var title = $(myid + ' td:nth-child(1)').text();
+        var desc = $(myid + ' td:nth-child(8)').text();
+        var fy1112 = $(myid + ' td:nth-child(2)').text() || "";
+        var fy1213 = $(myid + ' td:nth-child(3)').text() || "";
+        var fy1314 = $(myid + ' td:nth-child(4)').text() || "";
+        var fy1415 = $(myid + ' td:nth-child(5)').text() || "";
+        var fy1516 = $(myid + ' td:nth-child(6)').text() || "";
+        var fy1617 = $(myid + ' td:nth-child(7)').text() || "";
+        $('.chart-legend .title').text(title);
+        $('.chart-legend .desc').text(desc);
+        $('.chart-legend .fy1112 span').text(fy1112);
+        $('.chart-legend .fy1213 span').text(fy1213);
+        $('.chart-legend .fy1314 span').text(fy1314);
+        $('.chart-legend .fy1415 span').text(fy1415);
+        $('.chart-legend .fy1516 span').text(fy1516);
+        $('.chart-legend .fy1617 span').text(fy1617);
+
+        $('.chart-legend .clcontent').fadeIn();
+    });
+
+    // expenditure chart mouseovers
+    $('#m_expenditureschart area').mouseover(function () {
+        $('.chart-legend .instructions').hide();
+        var myid = $(this).attr('href');
+        $('.chart-legend .title').text($(myid + ' td:nth-child(1)').text());
+        $('.chart-legend .desc').text($(myid + ' td:nth-child(4)').text());
+        $('.chart-legend .dollars span').text($(myid + ' td:nth-child(2)').text());
+        $('.chart-legend .percent span').text($(myid + ' td:nth-child(3)').text());
+        $('.chart-legend .clcontent').fadeIn();
+    });
+
+});
+
+
+function clicktab(hash) {
+    $('a[href="' + hash + '"]').tab('show');
+    return false;
+}
+
+
+
+</script>
+
+</body>
+</html>

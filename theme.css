@@ -4,9 +4,42 @@
 
 body {
   padding-bottom: 40px;
-  color: #5a5a5a;
+  color: #000;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+.subtitle {
+    background-color: #006;
+    color: #fff;
+}
+.subtotal {
+    background-color: #ccf;
+}
+
+div.chart-legend {
+    min-height: 200px;
+    background-color:#ddd;
+    padding:1em;
+}
+
+div.chart-legend div {
+    margin: 0.5em 0;
+}
+div.chart-legend div.title {
+    text-align:center;
+    font-weight:bold;
+    font-size:125%;
+}
+
+
+/*
+.nav-pills > li > a {
+    background-color: bisque;
+}
+*/
 
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
@@ -40,7 +73,7 @@ body {
 /* Carousel base class */
 .carousel {
   /*height: 500px;*/
-  margin-bottom: 60px;
+  margin-bottom: 1em;
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
@@ -56,7 +89,8 @@ body {
 /*  position: absolute;
   top: 0;
   left: 0;
-*/  min-width: 100%;
+*/
+  min-width: 100%;
   height: auto;
 }
 
@@ -130,5 +164,16 @@ body {
 @media (min-width: 992px) {
   .featurette-heading {
     margin-top: 120px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .nav > li > a {
+    height: 4em;
+  }
+}
+@media (max-width: 767px) {
+  .nav > li > a {
+    height: auto;
   }
 }
