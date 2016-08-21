@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" metal:use-macro="here/template.pt/macros/main_template">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Template</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <!-- <link href="css/bootstrap-theme.min.css" rel="stylesheet"> -->
+    <link href="theme.css" rel="stylesheet">
+
+</head>
+<body>
+<metal:block metal:fill-slot="content">
+    <div class="container"
+        tal:define="uid request/cookies/dduid | nothing;
+            cdata python: uid and request.form.get('subject', '');
+            responses python:(cdata and cdata[0]) or {}"
+        >
+
+        <div class="item" style="margin-bottom:18px">
+            <a href="#"><img src="images/values.jpg" height="400" width="1200" alt="What do you value?" /></a>
+        </div>
+
+        <ul class="nav nav-pills nav-justified">
+            <li><a href="index.html">Welcome</a></li>
+            <li><a href="funding.html">Funding Davis Schools</a></li>
+            <li><a href="parcel.html">Davis Parcel Taxes</a></li>
+            <li><a href="timeline.html">Budget Timeline</a></li>
+            <li class="active"><a href="values.html">What Do You Value?</a></li>
+            <li><a href="actions.html">Actions You Can Take</a></li>
+        </ul>
+
+        <h1>What values guide your priorities?</h1>
+
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <p>So that the district’s budget plans may consider community priorities, help us understand yours. What education values are most important to you?</p>
+
+                <p>Try this exercise. Divide 100 points between the values listed below.  Give more points to those values more important to you.</p>
+
+                <p>Some values may overlap. You do not have to give any points to a value that is not important to you. You may create one new value statement if you like.</p>
+
+                <div class="clearboth" style="margin-top:1em"></div>
+
+                <table id="running" class="table">
+                    <tr>
+                        <th>Total allocated:</th>
+                        <td id="valueTotal">0</td>
+                    </tr>
+                    <tr>
+                        <th>Remaining:</th>
+                        <td id="valueLeft">100</td>
+                    </tr>
+                </table>
+
+                <p id="fieldhelp"></p>
+
+                <form id="valueform" method="POST" action="showvalues">
+                    <table class="table vtable"><tbody>
+                    <tr class="field randomize" title="Belief: Students benefit from being educated at relatively small campuses close to where they live."><td class="tcol1"><input class="spinning" type="text" value="0" size="4" maxlength="3" name="val1" tal:attributes="value python:responses.get('val1','0')" /></td><td class="tcol2">I value neighborhood schools.</td></tr>
+
+                    <tr class="field randomize" title="Belief: Educational programs in the district such as Gifted and Talented Education (GATE), Spanish Immersion, Montessori and the DaVinci Charter Academy meet the different learning styles of Davis students."><td class="tcol1"><input class="spinning" type="text" value="0" size="4" maxlength="3" name="val2" tal:attributes="value python:responses.get('val2','0')" /></td><td class="tcol2">I value choice of magnet programs.</td></tr>
+
+                    <tr class="field randomize" title="Belief: Good salaries and working conditions allow the district to compete for best candidates and to retain experienced employees.  This leads to greater student success."><td class="tcol1"><input class="spinning" type="text" value="0" size="4" maxlength="3" name="val3" tal:attributes="value python:responses.get('val3','0')" /></td><td class="tcol2">I value attracting and retaining highly qualified employees.</td></tr>
+
+                    <tr class="field randomize" title="Belief: K-12 education should prepare students for placement in the University of California, California State, and other institutions of higher learning."><td class="tcol1"><input class="spinning" type="text" value="0" size="4" maxlength="3" name="val4" tal:attributes="value python:responses.get('val4','0')" /></td><td class="tcol2">I value programs that prepare students for higher education.</td></tr>
+
+                    <tr class="field randomize" title="Belief: K-12 education should teach students skills and abilities that prepare them for jobs."><td class="tcol1"><input class="spinning" type="text" value="0" size="4" maxlength="3" name="val5" tal:attributes="value python:responses.get('val5','0')" /></td><td class="tcol2">I value programs that prepare students for the workforce.</td></tr>
+
+                    <tr class="field randomize" title="Belief: Extra-curricular activities create a sense of belonging and teamwork that promote student success."><td class="tcol1"><input class="spinning" type="text" value="0" size="4" maxlength="3" name="val6" tal:attributes="value python:responses.get('val6','0')" /></td><td class="tcol2">I value activities such as sports, clubs and performing arts.</td></tr>
+
+                    <tr class="field randomize" title="Belief: K-12 education should help all students achieve academic success."><td class="tcol1"><input class="spinning" type="text" value="0" size="4" maxlength="3" name="val7" tal:attributes="value python:responses.get('val7','0')" /></td><td class="tcol2">I value programs for students needing extra academic support.</td></tr>
+
+                    <tr class="field randomize" title="Belief: Teacher student interaction is critical to academic success."><td class="tcol1"><input class="spinning" type="text" value="0" size="4" maxlength="3" name="val8" tal:attributes="value python:responses.get('val8','0')" /></td><td class="tcol2">I value small class sizes with low teacher to student ratios.</td></tr>
+
+                    <tr class="field randomize" title="Belief: School principals, counselors, secretaries and custodians support students and families and maintain safe campuses.  School and district administrators coordinate instructional program and maintain quality operations."><td class="tcol1"><input class="spinning" type="text" value="0" size="4" maxlength="3" name="val9" tal:attributes="value python:responses.get('val9','0')" /></td><td class="tcol2">I value a safe and well-functioning school environment.</td></tr>
+
+                    <tr class="field randomize" title="Belief: Modern, adequately equipped buildings and well-maintained grounds support student learning."><td class="tcol1"><input class="spinning" type="text" value="0" size="4" maxlength="3" name="val10" tal:attributes="value python:responses.get('val10','0')" /></td><td class="tcol2">I value well-maintained school facilities.</td></tr>
+
+                    <tr class="field" id="ropen"><td class="tcol1"><input class="spinning" type="text" value="0" size="4" maxlength="3" name="val11" tal:attributes="value python:responses.get('val11','0')" /></td><td class="tcol2">I value: <input type="text" id="vopen" name="vopen" maxlength="255" tal:attributes="value python:responses.get('vopen','')" /></td></tr>
+
+                    <tr class="field">
+                        <td colspan="2">
+                            <p>Thank you for sharing your ideas.</p>
+
+                            <p>Would you like to combine your results with those of others who have completed the survey?</p>
+
+                            <p><input type="submit" value="Submit my valuations" /></p>
+                        </td>
+                    </tr>
+                    </tbody></table>
+
+                </form>
+
+                <p class="clearboth"></p>
+                <p>Would you like to use this form in a group exercise? A <a href="ddvalues.pdf">printable PDF version</a> is available.<br />
+                <a href="districtdollars_es.pdf">Values exercise in Spanish.</a> <a href="districtdollars_ch.pdf">Values exercise in Chinese.</a></p>
+            </div>
+        </div>
+
+    </div>
+</metal:block>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

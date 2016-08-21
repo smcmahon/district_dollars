@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" metal:use-macro="here/template.pt/macros/main_template">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Template</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <!-- <link href="css/bootstrap-theme.min.css" rel="stylesheet"> -->
+    <link href="theme.css" rel="stylesheet">
+
+</head>
+<body>
+<metal:block metal:fill-slot="content">
+    <div class="container">
+        <div class="item" style="margin-bottom:18px">
+            <a href="#"><img src="images/actions.jpg" height="400" width="1200" alt="Funding Davis Schools" /></a>
+        </div>
+
+        <ul class="nav nav-pills nav-justified">
+            <li><a href="index.html">Welcome</a></li>
+            <li><a href="funding.html">Funding Davis Schools</a></li>
+            <li><a href="parcel.html">Davis Parcel Taxes</a></li>
+            <li><a href="timeline.html">Budget Timeline</a></li>
+            <li><a href="values.html">What Do You Value?</a></li>
+            <li class="active"><a href="actions.html">Actions You Can Take</a></li>
+        </ul>
+
+        <h1>Actions You Can Take</h1>
+
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <p>You’ve already started! Thank you for taking the time to get better informed about the district’s budget, and for sharing your own thoughts and values to help guide future decisions. If you would like to do more, here are some possibilities:</p>
+
+                <p><strong><a href="http://www.yoloelections.org/voter-registration" target="_blank">Register to vote</a>.</strong></p>
+
+                <h3>Follow current developments</h3>
+
+                <ul>
+                <li><a href="https://davis.agendaonline.net/public/davis" target="_blank">DJUSD Board of Education meeting calendar and online agenda</a></li>
+                <li><a href="http://www.djusd.tv" target="_blank">Watch DJUSD Board of Education meetings live and in replay at www.djusd.tv</a></li>
+
+                <li><a href="https://davis.agendaonline.net/public/davis">Learn more about the DJUSD Local Control Accountability Plan</a></li>
+                </ul>
+
+                <h3>Share your views</h3>
+                <ul>
+                    <li>Send your questions and suggestions on the Local Control and Accountability Plan to: <a href="mailto:LCAP@djusd.net">LCAP@djusd.net</a></li>
+                    <li>Send your questions or comments to the Superintendent: <a href="mailto:superintendent@djusd.net">superintendent@djusd.net</a></li>
+                    <li>Send your questions or comments to the Board of Education: <a href="mailto:boe@djusd.net">boe@djusd.net</a></li>
+                    <li>Send your questions or comments to your state elected representatives:
+                        <div>
+                            <ul  style="list-style-position:outside">
+                                <li>Assembly Member Bill Dodd: <a href="mailto:Bill.Dodd@asm.ca.gov">Bill.Dodd@asm.ca.gov</a></li>
+                                <li>Senator Lois Wolk: <a href="mailto:Lois.Wolk@sen.ca.gov">Lois.Wolk@sen.ca.gov</a></li>
+                                <li>Governor Jerry Brown: <a href="http://govnews.ca.gov/gov39mail/mail.php" target="_blank">http://govnews.ca.gov/gov39mail/mail.php</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+
+                <h3 style="clear:both"><a href="#" rel="#ddfeedback" class="ovl">Tell us how to improve District Dollars</a></h3>
+
+                <h3>Volunteer</h3>
+                <ul style="list-style-position:inside">
+                    <li>Contact your <a href="http://groups.dcn.org/multischool" target="_blank">local school or their PTA/PTO</a> to find out how your donation of time can help.</li>
+                </ul>
+
+                <div class="clearboth"></div>
+                <h3>Learn more</h3>
+                <ul style="list-style-position:inside">
+                    <li><a href="http://dq.cde.ca.gov/dataquest/" target="_blank">Facts about California schools and districts</a></li>
+                    <li><a href="http://nces.ed.gov/ccd/elsi/" target="_blank">Comparisons to other states</a></li>
+                    <li><a href="http://www.djusd.net/cms/page_view?d=x&piid=&vpid=1369296855511" target="_blank">The DJUSD Budget</a></li>
+                    <li><a href="http://www.budgetchallenge.org/pages/home">Take the California Budget Challenge</a></li>
+                    <li><a href="http://www.cafwd.org/index.php/ftf/pages/take-revenue-challenge">Take the California Forward Revenue Challenge</a></li>
+                </ul>
+
+
+                <h3>How can I make a donation to support Davis students?</h3>
+
+                <p>The following foundations support Davis students and welcome your donations:</p>
+                <ul>
+                    <li><a href="http://www.davisfarmtoschool.org/" target="_blank">Davis Farm to School</a></li>
+                    <li><a href="http://members.dcn.org/dsaf/" target="_blank">Davis School Arts Foundation</a></li>
+                    <li><a href="http://www.davisschoolsfoundation.org" target="_blank">Davis Schools Foundation</a></li>
+                    <li><a href="http://www.dhsblueandwhite.org/" target="_blank">Davis Senior High School Blue and White Foundation</a></li>
+                </ul>
+
+                <p>You may also donate directly to DJUSD at 526 B St., Davis, California 95616</p>
+            </div>
+        </div>
+    </div>
+
+
+</metal:block>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

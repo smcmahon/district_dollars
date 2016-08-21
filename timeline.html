@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" metal:use-macro="here/template.pt/macros/main_template">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Template</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <!-- <link href="css/bootstrap-theme.min.css" rel="stylesheet"> -->
+    <link href="theme.css" rel="stylesheet">
+
+</head>
+<body>
+<metal:block metal:fill-slot="content">
+    <div class="container">
+        <div class="item" style="margin-bottom:18px">
+            <a href="#"><img src="images/timeline.jpg" height="400" width="1200" alt="Budget Timeline" /></a>
+        </div>
+
+        <ul class="nav nav-pills nav-justified">
+            <li><a href="#">Welcome</a></li>
+            <li><a href="funding.html">Funding Davis Schools</a></li>
+            <li><a href="parcel.html">Davis Parcel Taxes</a></li>
+            <li class="active"><a href="timeline.html">Budget Timeline</a></li>
+            <li><a href="values.html">What Do You Value?</a></li>
+            <li><a href="actions.html">Actions You Can Take</a></li>
+        </ul>
+
+        <h1>Budget Timeline</h1>
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <h2 tal:condition="nothing">What is the timeline for the school budget?</h2>
+
+                <p>The fiscal year begins on July 1. That means the deadline for the final budget is June 30, each year.  The district must submit regular budget reports to the Yolo County Office of Education showing a realistic three year plan to balance the budget. If lay-offs are required, those employees must get notices on certain dates.  If the district does not meet all these requirements, future options are limited or the county may step in to assist in budget decisions.</p>
+
+                <table class="table" id="timeline_table">
+                    <tbody>
+                        <tr>
+                            <th>July 1st</th>
+                            <td>Begin
+                            current
+                            fiscal
+                            year</td>
+                        </tr>
+                        <tr>
+                            <th>December 15th</th>
+                            <td>First
+                            interim
+                            budget
+                            report</td>
+                        </tr>
+                        <tr>
+                            <th>January 10th</th>
+                            <td>Governor’s
+                            Budget Plan
+                            for two
+                            fiscal years</td>
+                        </tr>
+                        <tr>
+                            <th>March 15th</th>
+                            <td>Second
+                            Interim
+                            budget report;<br />
+                            Preliminary
+                            notice of
+                            possible
+                            lay off</td>
+                        </tr>
+                        <tr>
+                            <th>May 15th</th>
+                            <td>Governor’s
+                            Budget
+                            Revision;<br />
+                            Final notice
+                            of lay off.</td>
+                        </tr>
+                        <tr>
+                            <th>June 30th</th>
+                            <td>Board
+                            adopts
+                            budget and Local Control and Accountability Plan
+                            for next
+                            fiscal
+                            year</td>
+                        </tr>
+                        <tr>
+                            <th>July 1st</th>
+                            <td>Begin
+                            new
+                            fiscal
+                            year</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</metal:block>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
