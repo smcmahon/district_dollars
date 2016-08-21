@@ -5,6 +5,7 @@
 body {
   padding-bottom: 40px;
   color: #000;
+  font-weight: 300;
 }
 
 img {
@@ -34,12 +35,28 @@ div.chart-legend div.title {
     font-size:125%;
 }
 
-
-/*
-.nav-pills > li > a {
-    background-color: bisque;
+h1 {
+    margin: 1em 0 0.25em;
+    text-align: center;
 }
-*/
+
+
+.nav-pills > li > a {
+    padding: 10px 5px;
+}
+
+.carousel-indicators {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    z-index: 15;
+    width: 100%;
+    margin-left: 0;
+    padding-left: 0;
+    list-style: none;
+    text-align: center;
+    background-color: #444;
+}
 
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */

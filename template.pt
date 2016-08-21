@@ -1,100 +1,20 @@
 <!DOCTYPE html>
-<html lang="en" metal:use-macro="here/template.pt/macros/main_template">
+<html lang="en" metal:define-macro="main_template">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Bootstrap 101 Template</title>
 
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- <link href="css/bootstrap-theme.min.css" rel="stylesheet"> -->
     <link href="theme.css" rel="stylesheet">
-
   </head>
   <body>
-    <metal:block metal:fill-slot="content">
-    <div class="container">
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-          <!-- Indicators -->
-          <div class="carousel-inner" role="listbox">
-            <div class="item active">
-              <a href="#" title="Welcome"><img src="images/welcome.jpg" height="400" width="1200" alt="Welcome" /></a>
-            </div>
-            <div class="item">
-              <a href="funding.html"><img src="images/funding.jpg" height="400" width="1200" alt="Funding Davis Schools" /></a>
-            </div>
-            <div class="item">
-              <a href="parcel.html"><img src="images/davis.jpg" height="400" width="1200" alt="Davis Parcel Taxes" /></a>
-            </div>
-            <div class="item">
-              <a href="#"><img src="images/timeline.jpg" height="400" width="1200" alt="Davis Parcel Taxes" /></a>
-            </div>
-            <div class="item">
-              <a href="#"><img src="images/values.jpg" height="400" width="1200" alt="Davis Parcel Taxes" /></a>
-            </div>
-            <div class="item">
-              <a href="#"><img src="images/actions.jpg" height="400" width="1200" alt="Davis Parcel Taxes" /></a>
-            </div>
-          </div>
-          <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-            <li data-target="#myCarousel" data-slide-to="3"></li>
-            <li data-target="#myCarousel" data-slide-to="4"></li>
-            <li data-target="#myCarousel" data-slide-to="5"></li>
-          </ol>
 
-        </div>
-
-          <ul class="nav nav-pills nav-justified">
-            <li class="active"><a href="#">Welcome</a></li>
-            <li><a href="funding.html">Funding Davis Schools</a></li>
-            <li><a href="">Davis Parcel Taxes</a></li>
-            <li><a href="#">Budget Timeline</a></li>
-            <li><a href="#">What Do You Value?</a></li>
-            <li><a href="#">Actions You Can Take</a></li>
-          </ul>
-
-        <h1>Welcome to District Dollars</h1>
-
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <h3>Updated September 2016; includes projected budgets through 2019.</h3>
-
-                <p>Revenue from Proposition 30 and improving economic conditions brought another good year for California schools in 2016. Davis schools received an increase to fund lower class sizes, new and restored programs for students, improved compensation for employees, expanded professional learning opportunities, and technology to enhance classroom instruction.</p>
-
-                <p>Now in the fourth year of implementation, the Local Control Funding Formula sets key state priorities for all students, but school districts choose the programs that are most likely to benefit their students. The LCFF provides more funding for students who come from low-income families, those learning English and those living in foster care.</p>
-
-                <p>With Measures C and E set to expire in 2017, the District placed Measure H on the November 2016 ballot.  This measure will replace the expiring taxes with a single eight-year parcel tax of $620/year, raising $9.5 million each year to continue outstanding programs for Davis students.</p>
-
-                <p><em>District Dollars</em> is a web-based, interactive program to help you understand the DJUSD budget situation.</p>
-
-                <p>You will learn about:</p>
-
-                <ul>
-                    <li>How we pay for California schools</li>
-                    <li>How much money the district gets and how it is spent</li>
-                    <li>Davis parcel taxes and what they fund</li>
-                </ul>
-
-                <p><em>District Dollars</em> lets you ask questions, provide feedback and share your own values about education priorities.</p>
-
-                <p style="text-align:center;color:#600;"><em><strong>Note:</strong> The budget and specific numbers are subject to change.</em></p>
-
-
-            </div>
-        </div>
-
-        <div class="text-center" style="margin: 2em 0">
-            <a href="funding.html" role="button" class="btn btn-primary">Next: Funding Davis Schools</a>
-        </div>
-
+    <div id="cwrapper" metal:define-slot="content">
+        Content
     </div>
-    </metal:block>
-
 
     <div style="text-align:center;width:80%;font-size:small;margin:0 auto 1em">
         <img src="images/djusd.png" width="317" height="80" alt="DJUSD Logo" title="Davis Joint Unified School District" class="noprint" style="margin: 0.5em" /><br />
@@ -105,6 +25,7 @@
             <a href="#" rel="#ddfeedback" class="ovl" data-toggle="modal" data-target="#ddfeedback">Please, tell us how to improve District Dollars.</a>
         </div>
     </div>
+
 
     <div class="modal fade" tabindex="-1" role="dialog" id="ecredits">
       <div class="modal-dialog" role="document">
@@ -178,10 +99,23 @@
     </div>
 
 
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
-  </body>
+
+    <metal:block metal:define-slot="script_slot"></metal:block>
+
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-4504747-3']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+      })();
+    </script>
+
+</body>
 </html>
